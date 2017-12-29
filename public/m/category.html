@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico"> 
+	<title>分类详情</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="lib/mui/css/mui.css">
+	<link rel="stylesheet" type="text/css" href="lib/fontAwesome/css/font-awesome.css">
+	<link rel="stylesheet/less" type="text/css" href="less/category.less">
+	<script type="text/javascript" src="lib/less/less.js"></script>
+	
+</head>
+<body>
+	<header id="header">	
+		<a href="index.html" class="fa fa-arrow-left"></a>
+		<h4>终极乐淘</h4>
+		<a href="search.html" class="fa fa-search" aria-hidden="true"></a>
+	</header>
+
+	<main id="main">
+		<div class="left-category">
+			<ul class="left-nav">
+				<li class="active"><a href="#">男士馆</a></li>
+				<li><a href="#">男士馆</a></li>
+				<li><a href="#">男士馆</a></li>
+				<li><a href="#">男士馆</a></li>
+				<li><a href="#">男士馆</a></li>
+			</ul>
+		</div>
+		<div class="right-category mui-scroll-wrapper">
+		
+			<div class="mui-content mui-scroll">
+				<div class="mui-row">
+					<div class="mui-col-xs-4">
+						<a href="#">
+							<img src="images/brand1.png" alt="">
+							<p>阿迪王</p>
+						</a>
+					</div>
+					<div class="mui-col-xs-4">
+						<a href="#">
+							<img src="images/brand2.png" alt="">
+							<p>阿迪王</p>
+						</a>
+					</div>
+					<div class="mui-col-xs-4">
+						<a href="#">
+							<img src="images/brand3.png" alt="">
+							<p>阿迪王</p>
+						</a>
+					</div>
+					<div class="mui-col-xs-4">
+						<a href="#">
+							<img src="images/brand4.png" alt="">
+							<p>阿迪王</p>
+						</a>
+					</div>
+					<div class="mui-col-xs-4">
+						<a href="#">
+							<img src="images/brand5.png" alt="">
+							<p>阿迪王</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</main>
+
+
+
+	<footer id="footer">
+		<div class="mui-content">
+			<div class="mui-row">
+				<div class="mui-col-xs-3">
+					<a href="index.html" class="fa fa-home now">
+						<span>首页</span>
+					</a>
+				</div>
+				<div class="mui-col-xs-3">
+					<a href="category.html" class="fa fa-bars">
+						<span>分类</span>
+					</a>
+				</div>
+				<div class="mui-col-xs-3">
+					<a href="#" class="fa fa-shopping-cart">
+						<span>购物车</span>
+					</a>
+				</div>
+				<div class="mui-col-xs-3">
+					<a href="#" class="fa fa-user">
+						<span>会员中心</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+	<script type="text/javascript" src="lib/zepto/zepto.js"></script>
+	<script type="text/javascript" src="lib/mui/js/mui.js"></script>
+	<script type="text/javascript" src="lib/artTemplate/template.js"></script>
+	<script type="text/javascript" src="js/category.js"></script>
+</body>
+</html>
+<script type="text/html" id="leftNav">
+	{{each rows as value}}
+		<li>
+			<a href="#" data-id = "{{value.id}}">{{value.categoryName}}</a>
+		</li>
+	{{/each}}
+</script>
+
+<script type="text/html" id="rightContent">
+	{{each rows as value}}
+		<div class="mui-col-xs-4">
+			<a href="#">
+				<img src="../{{value.brandLogo}}" alt="">
+				<p>{{value.brandName}}</p>
+			</a>
+		</div>
+	{{/each}}
+</script>

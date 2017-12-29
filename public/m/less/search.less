@@ -1,0 +1,72 @@
+@import "base.less";
+
+
+#header {
+	>.fa-arrow-left{
+		position: absolute;
+		right: auto;
+		left: 10px;
+	}
+}
+
+#main {
+	padding: 45px 0 55px 0;
+	width: 100%;
+	>.search-box{
+		width: 100%;
+		position: relative;
+		padding: 10px;
+		>input{
+			height: 30px;
+			margin-right: 60px;
+			border-radius: 7px;
+			border-color: @main-color;
+			font-size: 12px;
+			margin-bottom: 0;
+		}
+		>button{
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			height: 30px;
+			width: 60px;
+			background-color: @main-color;
+			color:#fff;
+		}
+	}
+
+	>.search-result {
+		font-size: 12px;
+		padding: 0 10px;
+		>.title{
+			margin-bottom: 10px;
+			>span:last-child{
+				float: right;
+				>a{
+					color: #333;
+				}
+			}
+		}
+		>.mui-table-view{
+			
+			>li{
+				&:after{
+					left: 0;
+				}
+				// padding-left: 0;
+				// padding-right: 0;
+				>a{
+					display: block;
+					font-size: 14px;
+					>i{
+					background-color: #fff;
+					color: #333;
+					float: right;
+
+				}
+				}
+				
+			}
+		}
+	}
+}
